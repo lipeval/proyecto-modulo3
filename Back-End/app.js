@@ -1,10 +1,10 @@
 require('dotenv').config();
 
 const bodyParser   = require('body-parser');
+const jade          = require('jade');
 const cookieParser = require('cookie-parser');
 const express      = require('express');
 const favicon      = require('serve-favicon');
-const hbs          = require('hbs');
 const mongoose     = require('mongoose');
 const logger       = require('morgan');
 const path         = require('path');
@@ -14,7 +14,7 @@ const MongoStore   = require("connect-mongo")(session);
 
 mongoose.Promise = Promise;
 mongoose
-  .connect('mongodb://bliss:bliss69@ds018238.mlab.com:18238/malditos-juveniles', {useMongoClient: true})
+  .connect('mongodb://lipeval:ladfellas1@ds133621.mlab.com:33621/lipes', { useNewUrlParser: true })
   .then(() => {
     console.log('Connected to Mongo!')
   }).catch(err => {
@@ -35,7 +35,7 @@ app.use(session({
     mongooseConnection:mongoose.connection,
     ttl:24*60*60
   }),
-  secret: 'bliss',
+  secret: 'lipe',
   saveUninitialized: true,
   resave: false,
   cookie : { httpOnly: true, maxAge: 2419200000 }
@@ -62,7 +62,7 @@ app.use(passport.session())
       
 
 app.set('views', path.join(__dirname, 'views'));
-app.set('view engine', 'hbs');
+app.set('view engine', 'jade');
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(favicon(path.join(__dirname, 'public', 'images', 'favicon.ico')));
 
@@ -74,9 +74,7 @@ app.locals.title = 'Express - Generated with IronGenerator';
 
 
 const index = require('./routes/index');
-const phones = require('./routes/phones')
 const auth = require('./routes/auth') // <--   esto
-app.use('/phones', phones)
 app.use('/', auth) // <-- y esto
 app.use('/', index);
 
