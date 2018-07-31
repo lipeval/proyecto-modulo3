@@ -74,8 +74,10 @@ app.locals.title = 'Express - Generated with IronGenerator';
 
 
 const index = require('./routes/index');
+const cards = require ('./routes/cards')
 const auth = require('./routes/auth') // <--   esto
-app.use('/', auth) // <-- y esto
+app.use('/', auth); // <-- y esto
+app.use('/', cards);
 app.use('/', index);
 
 
