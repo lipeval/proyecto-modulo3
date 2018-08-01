@@ -12,26 +12,26 @@ export class CardsService {
       _id:0,
       name: "Buceo",
       desc: "Sumergete en este hermoso deporte y conoce las maravillas del mar",
-      photoURL: ''
+      photoURL: 'https://d3gye3kweytqcv.cloudfront.net/img/tours/53025b6ceb84cd115e38ed88/full/1.jpg'
     },
     {
       _id:1,
       name: "Tours",
       desc: "Explora México",
-      pic: ''
+      photoURL: 'https://geoaventura.com/wp-content/uploads/2016/05/Matacanes.jpg'
     },
     {
       _id:2,
       name: "Bici de Montaña",
       desc: "Las mejores rutas y bajadas. Diversion garantizada!",
-      pic: ''
+      photoURL: 'http://www.kronplatz.com/website/var/tmp/image-thumbnails/370000/372048/thumb__portal-headerslider-full/mountainbike_peitler-kofl.jpeg'
     },
     {
       _id:3,
       name: "Rafting",
       desc: "Rios en Veracruz te dan la oportunidad de probar esta exhilarante experiencia",
-      pic: ''
-    },
+      photoURL: 'http://www.mexicorafting.com/raftingenmorelos.jpg'
+    }
   ]
 
   getList(){

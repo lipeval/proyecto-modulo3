@@ -1,16 +1,60 @@
 
 
-<nav>
-  <h1>Titulo del e-commerce</h1>
-</nav>
-
-
-<section>
-
-  <h2>Produtos</h2>
-
-  <ul>
-    <li> *ngFor="let c of cards" [cards]="c" </li>
-  </ul>
-
+<section class="container" *ngFor="let card of cards">
+<mat-card class="example-card">
+    <mat-card-header>
+      <div mat-card-avatar class="example-header-image"></div>
+      <mat-card-title class="header">{{card.name}}</mat-card-title>
+    </mat-card-header>
+    <img mat-card-image src="{{card.photoURL}}" alt="photos of nature">
+    <mat-card-content>
+      <p>
+       {{card.desc}}
+      </p>
+    </mat-card-content>
+    <mat-card-actions>
+      <button mat-button [routerLink]="['/products', card._id]"> VER MAS</button>
+           
+    </mat-card-actions>
+  </mat-card>
 </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- 
+<section>
+<div *ngFor="let card of cards" class="mdc-card">
+    <div class="mdc-card__media mdc-card__media--square">
+      <div class="mdc-card__media-content"><p>{{card.name}}</p></div>
+    </div>
+    <img src="{{card.photoURL}}" alt="">
+    <p>{{card.desc}}</p>
+    <div class="mdc-card__actions">
+      <div class="mdc-card__action-buttons">
+        <button class="mdc-button mdc-card__action mdc-card__action--button">Action 1</button>
+        <button class="mdc-button mdc-card__action mdc-card__action--button">Action 2</button>
+      </div>
+      <div class="mdc-card__action-icons">
+        <button class="material-icons mdc-icon-button mdc-card__action mdc-card__action--icon" title="Share">share</button>      </div>
+    </div>
+  </div>
+  
+</section> -->
+
+
+
+
