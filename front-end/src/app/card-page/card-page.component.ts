@@ -1,31 +1,38 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import {Router} from '@angular/router';
-import { CardsService } from 'services/cards.service';
 import {MatCardModule} from '@angular/material/card';
-import { MatGridListModule } from '../../../node_modules/@angular/material';
+import { MatGridListModule } from '@angular/material';
+import { ActivatedRoute } from '@angular/router';
+import { ToursService } from '../services/tours.service';
 
 @Component({
   selector: 'app-card-page',
   templateUrl: './card-page.component.html',
-  styleUrls: ['./card-page.component.css']
+  styleUrls: ['./card-page.component.css'],
+  providers: [ToursService]
 })
 export class CardPageComponent implements OnInit {
-  cards:  Array<any> 
-  constructor(private cardsService: CardsService,
+
+  tours: any;
+  user: any;
+
+
+  constructor(private toursService: ToursService,
   private router: Router,
   private matCard: MatCardModule,
-  private matGrid: MatGridListModule
+  private matGrid: MatGridListModule,
+  private activatedRoute: ActivatedRoute
   ) { }
   
-  showProduct(card){
-    console.log(card)
+  showProduct(tours){
+    console.log(tours)
   }
   link(id){
-    this.cards = this.cardsService.getOneProduct(id)
+    this.tours = this.toursService.getOneProduct(id)
   }
 
   ngOnInit() {
-      this.cards = this.cardsService.getList()
+      this.tours = this.toursService.getList()
       
   }
 }

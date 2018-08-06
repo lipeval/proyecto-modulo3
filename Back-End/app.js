@@ -13,8 +13,7 @@ const MongoStore   = require("connect-mongo")(session);
 
 
 mongoose.Promise = Promise;
-mongoose
-  .connect('mongodb://lipeval:ladfellas1@ds133621.mlab.com:33621/lipes', { useNewUrlParser: true })
+mongoose.connect('mongodb://lipeval:ladfellas1@ds133621.mlab.com:33621/lipes', { useNewUrlParser: true })
   .then(() => {
     console.log('Connected to Mongo!')
   }).catch(err => {
@@ -35,7 +34,7 @@ app.use(session({
     mongooseConnection:mongoose.connection,
     ttl:24*60*60
   }),
-  secret: 'lipe',
+  secret: 'bliss',
   saveUninitialized: true,
   resave: false,
   cookie : { httpOnly: true, maxAge: 2419200000 }
@@ -74,10 +73,10 @@ app.locals.title = 'Express - Generated with IronGenerator';
 
 
 const index = require('./routes/index');
-const cards = require ('./routes/cards')
+const tours = require ('./routes/tours')
 const auth = require('./routes/auth') // <--   esto
 app.use('/', auth); // <-- y esto
-app.use('/', cards);
+app.use('/', tours);
 app.use('/', index);
 
 

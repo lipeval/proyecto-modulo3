@@ -1,0 +1,80 @@
+div {
+    margin-left: 50px;
+    padding: auto;
+   
+}
+
+section{
+    background-image: url('https://d2gg9evh47fn9z.cloudfront.net/800px_COLOURBOX30300182.jpg')
+}
+
+div.gallery {
+  border: 1px solid #ccc;
+}
+
+div.gallery:hover {
+  border: 1px solid #777;
+}
+
+div.gallery img {
+  width: 100%;
+  height: auto;
+}
+
+div.desc {
+  padding: 15px;
+  text-align: center;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.responsive {
+  padding: 0 6px;
+  float: left;
+  width: 24.99999%;
+}
+
+@media only screen and (max-width: 700px) {
+  .responsive {
+      width: 49.99999%;
+      margin: 6px 0;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .responsive {
+      width: 100%;
+  }
+}
+
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+
+.contact{
+  text-align: center;
+  list-style-type: none;
+  font-size: 17px;
+  padding-bottom: 30px;
+  margin-right: 28px
+}
+
+.footer{
+  margin-left: 120px;
+  font-size: 35px;
+}
+
+div[_ngcontent-c1] {
+  margin-left: 50px;
+  padding: auto;
+  margin-right: 50px;
+}
+
+.lema{
+  font-size: 22px
+}

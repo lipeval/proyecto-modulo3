@@ -1,24 +1,27 @@
-
-
-
 .container{
-    margin-left: 20px;
-    padding: 20px;
-    margin-top: 20px;
-    display: inline-block
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
 }
+
+ /* div.container{
+    display: inline-block; 
+    margin: 30px;
+    margin-right: 0;
+    padding: 0px;
+} */
 
 
 
 .header{
     font-size: 25px;
-    color: rgb(216, 98, 20)
+    color: white;
+    
     
 }
-
   img{
-      height: 250px;
-      width: 350px;
+      height: 260px;
+      width: 346px;
       margin-left: 1px;
       margin-right: 1px
   }
@@ -28,7 +31,33 @@
    
   }
 
-  /* .mdc-card{
+  .mat-card{
+    border-radius: 40px;
+    background: #4678b1;
+    color: white;
+    margin: 30px;
+    display: inline-block;
+    height: 400px;
+  }
 
-  } */
 
+
+ 
+ 
+.jumbotron{
+    text-align: center;
+    margin-bottom: 0;
+    background: #4678b1;
+    color: white;
+
+} 
+
+.row {
+    margin-right: -15px;
+    margin-left: 20px;
+}
+
+iframe{
+    height: 250px;
+    width: 300px
+}

@@ -1,0 +1,32 @@
+<section class="container"> 
+
+    <h2>Atrevete Aventuras</h2>
+  <p>Llenar informacion sobre el tour</p>
+  
+  <div>
+  <label>
+      Nombre de la compañia:
+  </label> 
+  <br>
+  <input [(ngModel)]="form.title" id="name" type="text" class="form-control"><br>
+  <label for="place">
+      Lugar del tour:
+  </label>
+  <br>
+  <input [(ngModel)]="form.place" type="text" name="place" class="form-control"><br>
+  Fechas:
+  <br>
+  <input [(ngModel)]="form.date" type="date" name="date">
+  <br>
+  De que se trata:
+  <br>
+  <textarea [(ngModel)]="form.desc" cols="30" rows="10" class="form-control"></textarea><br>
+  Sube una foto:
+  <br>
+  <input type="file" name="myFile">
+  <br>  
+  <button (click)="myFunction()" class="btn btn-primary">Submit</button>
+</div>
+
+
+

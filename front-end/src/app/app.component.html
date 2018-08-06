@@ -1,12 +1,24 @@
-<!--The content below is only a placeholder and can be replaced.-->
-<nav>
-  <a [routerLink]="['home']"> Home </a>
-  |
-  <a [routerLink]="['products']"> Aventura! </a>
-  |
-  <a [routerLink]="['signup']"> Registrate! </a>
-</nav>
-<router-outlet></router-outlet>
 
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<nav class="container" class="navbar navbar-default">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" [routerLink]="['home']"  >Atreve Aventuras</a>
+    </div>
+    <ul class="nav navbar-nav">
+      <li class="active" [routerLink]="['home']"><a >Home</a></li>
+      <li><a [routerLink]="['tours']">Aventura</a></li>
+      <li><a [routerLink]="['signup']">Registrate</a></li>
+      <li><a [routerLink]="['private']">Admin</a></li>
+      <li> <a href="#!" (click)="logout()" > Logout </a></li>
+    </ul>
+  </div>
+</nav>
+<div>
+  
+</div>
+<router-outlet></router-outlet> 
 
 

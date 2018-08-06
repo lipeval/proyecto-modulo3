@@ -1,11 +1,23 @@
 body{
     margin: 0;
     padding: 0;
+    background-color: lightblue;
 }
 
-nav{
+/* nav{
     display: flex;
     justify-content: space-around;
     font-size: 20px;
 
+} */
+
+navbar{
+    display: flex;
+    justify-content: space-between;
 }
+
+.navbar-default .navbar-nav > .active > a,
+  .navbar-default .navbar-nav > .active > a:hover,
+  .navbar-default .navbar-nav > .active > a:focus {
+    color: #555;
+  }

@@ -4,11 +4,16 @@ import { SignupFormComponent } from './signup-form/signup-form.component';
 import { CardPageComponent } from './card-page/card-page.component';
 
 import {ViewproductComponent} from './viewproduct/viewproduct.component'
+import { PrivatePageComponent } from './private-page/private-page.component'
+import { HomePageComponent } from './home-page/home-page.component';
 
 export const routes: Routes = [
-    { path: 'home',  component: AppComponent },
+    { path: 'home',  component: HomePageComponent},
+    {
+      path: 'private', component: PrivatePageComponent
+    },
     { 
-      path:'products', 
+      path:'tours', 
       component: CardPageComponent
     },
     {
@@ -16,9 +21,13 @@ export const routes: Routes = [
       component: SignupFormComponent
     },
     {
-      path:'products/:id',
+      path:'login',
+      component: SignupFormComponent
+    },
+    {
+      path:'tours/:id',
       component: ViewproductComponent
-    }
+    },
 
 ];
 

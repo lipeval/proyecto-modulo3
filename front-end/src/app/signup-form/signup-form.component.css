@@ -8,3 +8,92 @@ section {
 h1{
     text-align: center;
 }
+
+h4{
+    font-size: 1.4em;
+    margin-bottom: 20px;
+}
+
+.wrapper{
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    height: 100vh;
+}
+
+.app-title{
+    text-align: center;
+    color: black;
+    padding: 30px 0 10px 0;
+    font-family: 'Roboto';
+    font-size: 6.8em;
+}
+
+.tagline{
+    text-align: center;
+    color: black;
+    margin: 0 auto 30px auto;
+    font-size: 1.2em;
+    letter-spacing: 1px;
+    max-width: 60%;
+}
+
+.signup-box{
+    padding: 25px 30px;
+    background: lightblue;
+    max-width: 400px;
+    margin: 0 auto;
+    text-align: center;
+    border-radius: 2px;
+}
+
+
+
+.auth-button {
+    background: white;
+    color: black;
+    padding: 8px 26px;
+    border: none;
+    margin-top: 0;
+}
+
+.inputs{
+    margin-right: 10px;
+    margin-top: 10px;
+}
+
+.auth-container{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.auth-group{
+    padding: 0 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.fake-link{
+    cursor: pointer;
+}
+
+
+input:focus {
+    outline: none;
+  }
+  
+  .ng-touched {
+    border-color: blue;
+  }
+  
+  .ng-touched.ng-invalid {
+    border-color: red;
+  }
+  
+  .ng-touched.ng-valid {
+    border-color: green;
+  }

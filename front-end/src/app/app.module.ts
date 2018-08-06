@@ -1,11 +1,14 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import { NgModule,CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
+import {NgbModule} from '@ng-bootstrap/ng-bootstrap'
 import {FormsModule} from '@angular/forms'
 import { RouterModule } from "@angular/router";
-import {HttpModule} from '@angular/http'
+import {HttpModule} from '@angular/http';
 import {MatCardModule} from '@angular/material/card';
 import { MaterialModule } from './material.module'
 import {AuthService} from './auth.service'
+
+import {MatGridListModule} from '@angular/material/grid-list';
 
 
 import { AppComponent } from './app.component';
@@ -13,17 +16,20 @@ import { CardPageComponent } from './card-page/card-page.component';
 import { SignupFormComponent } from './signup-form/signup-form.component';
 
 import {routes} from './routes';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { CardsService } from 'services/cards.service';
-import { MatGridListModule } from '../../node_modules/@angular/material';
 import { ViewproductComponent } from './viewproduct/viewproduct.component';
+import { HomePageComponent } from './home-page/home-page.component';
+import { PrivatePageComponent } from './private-page/private-page.component';
+import { ToursService } from './services/tours.service';
 
 @NgModule({
   declarations: [
     AppComponent,
     CardPageComponent,
     SignupFormComponent,
-    ViewproductComponent
+    ViewproductComponent,
+    HomePageComponent,
+    PrivatePageComponent
+
   ],
   imports: [
     BrowserModule,
@@ -31,11 +37,13 @@ import { ViewproductComponent } from './viewproduct/viewproduct.component';
     FormsModule,
     HttpModule,
     RouterModule.forRoot(routes),
-    BrowserAnimationsModule,
     MaterialModule,
+    NgbModule.forRoot(),
     MatGridListModule
+   
   ],
-  providers: [CardsService, AuthService],
-  bootstrap: [AppComponent]
+  providers: [ToursService, AuthService],
+  bootstrap: [AppComponent],
+  schemas: [ CUSTOM_ELEMENTS_SCHEMA ]
 })
 export class AppModule { }

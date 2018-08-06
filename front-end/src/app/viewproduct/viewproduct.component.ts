@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {ActivatedRoute} from '@angular/router';
-import { CardsService } from 'services/cards.service';
+import { ToursService } from '../services/tours.service';
+
 
 @Component({
   selector: 'app-viewproduct',
@@ -10,18 +11,18 @@ import { CardsService } from 'services/cards.service';
 export class ViewproductComponent implements OnInit {
 
   constructor(private activatedRoute: ActivatedRoute,
-  private cardsService: CardsService) { }
+  private toursService: ToursService) { 
+  }
 
   ngOnInit() {
     this.activatedRoute.params.subscribe(params=>{
       this.productId = params.id;
-      this.productData = this.cardsService.getOneProduct(this.productId)
-      console.log(this.productData)
-
+      this.productData = this.toursService.getOneProduct(this.productId);
     })
   }
 
   productId: String;
-  productData: any = {};
+  productData: any;
 
 }
+

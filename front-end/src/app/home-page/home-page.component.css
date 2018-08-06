@@ -1,0 +1,38 @@
+footer {
+    background-color: #f2f2f2;
+    padding: 25px;
+  }
+
+  h1{
+    text-align: center;
+  }
+
+  .jumbotron p{
+    margin: -3px 30px 10px;
+  }
+
+  .font-home{
+    font-size: 20px
+  }
+
+ul{
+    font-size: 20px;
+    margin-left: 100px;
+    list-style-type: none;
+  }
+
+  .jumbotron p {
+    padding-bottom: 15px;
+    z-index: -1;
+}
+
+
+.icon{
+  position: relative;
+  /* Adjust these values accordingly */
+  top: 5px;
+  left: 5px;
+}
+.wrapper{
+  background: url('https://cdn.stocksnap.io/img-thumbs/960w/6ZYX4YY4IR.jpg') no-repeat center center fixed;
+}

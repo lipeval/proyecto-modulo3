@@ -1,0 +1,8 @@
+MongoDB shell version v4.0.0
+connecting to: mongodb://ds133621.mlab.com:33621/lipes
+MongoDB server version: 3.6.6
+WARNING: shell and server versions do not match
+rs-ds133621:PRIMARY> use[22G[Juse[25G
+bad use parameter
+rs-ds133621:PRIMARY> [22G[J[22G^C
+bye

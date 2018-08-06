@@ -1,4 +1,54 @@
-<div>
-  <h2>{{productData.name}}</h2>
-</div>
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+  
+  <div class="jumbotron">
+    <div class="container text-center">
+      <h1>{{productData.name}}</h1>      
+      <p>{{productData.desc}}</p>
+    </div>
+  </div>
+ 
+  <div class="container-fluid bg-3 text-center">    
+    <h3>Nuestros Tours</h3><br>
+    <p class="lema">{{productData.lema}}</p>
+    <div class="row">
+      <div class="col-sm-3">
+        
+        <img src="{{productData.photo1}}" class="img-responsive" style="width:100%" alt="Image">
+        <p>{{productData.descBuceo3}}</p>
+      </div>
+      <div class="col-sm-3"> 
+        
+        <img src="{{productData.photo2}}" class="img-responsive" style="width:100%" alt="Image">
+        <p>{{productData.descBuceo4}}</p>
+      </div>
+      <div class="col-sm-3"> 
+        
+        <img src="{{productData.photo3}}" class="img-responsive" style="width:100%" alt="Image">
+        <p>{{productData.descBuceo}}</p>
+      </div>
+      <div class="col-sm-3">
+        
+        <img src="{{productData.photo4}}" class="img-responsive" style="width:100%" alt="Image">
+        <p>{{productData.descBuceo2}}</p>
+      </div>
+    </div>
+  </div><br>
+  
+<br><br>
+  
+  <footer class="container-fluid text-center">
+    <h3 class="footer">PADI
+        <img style="width: 55px" style="height: 50px" src="https://www.padi.com/themes/custom/bootstrap_padi/public/images/logo_padi_light.svg" alt="logo padi">
+    </h3>
+    <div>
+        <p style="font-size: 20px">Contactar para saber mas de los tours</p>
+        <p style="font-size: 20px">Oficina de Latinoamerica</p>
+        <ul class="contact">
+          <li>Telefono de contacto: 001-866.668.6685</li>
+          <li>Email: customerservice@padi.com </li>
+        </ul>
+    </div>
+    
+  </footer>
 
+    

@@ -11,9 +11,9 @@ const userSchema = new require('mongoose').Schema({
     role:{
         type: String,
         enum: ['USER', 'EDITOR', 'ADMIN'],
-        default: 'USER'
+        default: 'ADMIN'
     },
-    products:[
+    tours:[
         {
             type: Schema.Types.ObjectId,
             ref: 'Product'
