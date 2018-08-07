@@ -7,9 +7,7 @@ footer {
     text-align: center;
   }
 
-  .jumbotron p{
-    margin: -3px 30px 10px;
-  }
+
 
   .font-home{
     font-size: 20px
@@ -21,18 +19,52 @@ ul{
     list-style-type: none;
   }
 
-  .jumbotron p {
-    padding-bottom: 15px;
-    z-index: -1;
+  img{
+    margin-top: -21px;
+    width: 100%;
+
+  }
+
+ 
+  p{
+    
+      margin: 0px 0px 42px;
+  
+  }
+
+ p [_ngcontent-c1] {
+    margin: 0px 0px 42px;
 }
 
 
-.icon{
+
+/* .icon{
   position: relative;
-  /* Adjust these values accordingly */
+  
   top: 5px;
   left: 5px;
-}
+} */
 .wrapper{
   background: url('https://cdn.stocksnap.io/img-thumbs/960w/6ZYX4YY4IR.jpg') no-repeat center center fixed;
 }
+
+.cont {
+  position: relative;
+  text-align: center;
+  color: rgb(119, 110, 110);
+  font-weight: bolder;
+}
+
+.top-left {
+  position: absolute;
+  top: 8px;
+  left: 16px;
+  font-size: 60px;
+  margin-left: 250px;
+}
+
+.font-home {
+  font-size: 33px;
+  color: rgb(119, 110, 110);
+}
+

@@ -1,12 +1,9 @@
 div {
     margin-left: 50px;
     padding: auto;
-   
+   margin-right: 50px;
 }
 
-section{
-    background-image: url('https://d2gg9evh47fn9z.cloudfront.net/800px_COLOURBOX30300182.jpg')
-}
 
 div.gallery {
   border: 1px solid #ccc;
@@ -77,4 +74,27 @@ div[_ngcontent-c1] {
 
 .lema{
   font-size: 22px
+}
+
+.jumbotron{
+
+
+  background-image: url( 'https://vignette.wikia.nocookie.net/uncyclopedia/images/e/e5/Blazing-Sun.jpg/revision/latest?cb=20110814000942'); 
+  background-repeat: no-repeat;
+  background-size: 100%
+
+}
+
+.jumbotron .h1, .jumbotron h1 {
+    font-size: 63px;
+    margin-left: 50px;
+    font-weight: bolder;
+    color: white
+}
+
+
+.box {
+  
+    width: 300px;
+    border: 1px solid gray;
 }
