@@ -12,11 +12,11 @@ import {CreateTourService} from '../services/create-tour.service'
 })
 export class PrivatePageComponent implements OnInit {
 
-  newTour: String = ''
-  newPlace: String = ''
-  newDate: String = ''
-  newDesc: String = ''
-  newPhotoUrl: String = ''
+  
+  title: String = ''
+  place: String = ''
+  date: String = ''
+  desc: String = ''
   user: any;
   _id: any;
   form={}
@@ -41,13 +41,6 @@ export class PrivatePageComponent implements OnInit {
         this.createTourService.createPlace(this.form)
           .subscribe(tour=>{console.log(tour)
             
-      })
-    }
-
-    updateUser(user){
-      this.authService.updateUser(this.user)
-      .subscribe(()=>{
-        this.router.navigate(['city-survey', this.newPlace]);
       })
     }
 
