@@ -8,7 +8,6 @@ import { PrivatePageComponent } from './private-page/private-page.component'
 import { HomePageComponent } from './home-page/home-page.component';
 
 export const routes: Routes = [
-    { path: '/', redirectTo: 'home'},
     { path: 'home',  component: HomePageComponent},
     {
       path: 'private', component: PrivatePageComponent

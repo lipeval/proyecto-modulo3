@@ -1,11 +1,16 @@
 import { Injectable } from '@angular/core';
+import {Observable} from 'rxjs';
+import { Http } from '@angular/http';
+import { map } from 'rxjs/operators';
 
 
 @Injectable({
   providedIn: 'root'
 })
 export class ToursService {
-    constructor(){}
+    constructor(
+      private http: Http
+    ){}
 
     tours: Array<any> = [
         {
@@ -108,6 +113,11 @@ export class ToursService {
     
       getList(){
         return this.tours
+      }
+
+      getAllTours(): Observable<any>{
+          return this.http.get("http://localhost:3000/tours")
+          .pipe(map((res: Response) => res.json()))
       }
       
       getOneProduct(id){

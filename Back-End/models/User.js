@@ -2,7 +2,10 @@ const passportLocalMongoose = require('passport-local-mongoose');
 const Schema = require('mongoose').Schema;
 const userSchema = new require('mongoose').Schema({
     username: String,
-    photoURL: String,
+    photoURL: {
+        type: String,
+        default: 'https://mxcity.mx/wp-content/uploads/2016/02/mexico-city-.jpg'
+    },
     email: String,
     profile:{
         type: Schema.Types.ObjectId,

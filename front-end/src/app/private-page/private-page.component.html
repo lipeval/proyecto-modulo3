@@ -1,6 +1,11 @@
-<section class="container"> 
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+    <link rel="stylesheet" href="/public/styles/style.css">
 
-    <h2>Atrevete Aventuras</h2>
+
+
+ 
+
+    <h2>Atrévete Aventuras</h2>
   <p>Llenar informacion sobre el tour</p>
   
   <div>
@@ -8,25 +13,24 @@
       Nombre de la compañia:
   </label> 
   <br>
-  <input  id="name" type="text" class="form-control"><br>
+  <input [(ngModel)]="form.title" id="name" type="text" class="form-control"><br>
   <label for="place">
       Lugar del tour:
   </label>
   <br>
-  <input  type="text" name="place" class="form-control"><br>
+  <input [(ngModel)]="form.place" type="text" name="place" class="form-control"><br>
   Fechas:
   <br>
-  <input type="date" name="date">
+  <input [(ngModel)]="form.date" type="date" name="date">
   <br>
   De que se trata:
   <br>
-  <textarea  cols="30" rows="10" class="form-control"></textarea><br>
+  <textarea [(ngModel)]="form.desc" cols="30" rows="10" class="form-control"></textarea><br>
   Sube una foto:
   <br>
-  <input type="file" name="myFile">
+  <input id="file-upload" type="file" (change)="handleFileInput($event)">
   <br>  
-  <button (click)="myFunction()" class="btn btn-primary">Submit</button>
+  <button type="submit" (click)="myFunction()" class="btn btn-primary">Submit</button>
 </div>
-
 
 

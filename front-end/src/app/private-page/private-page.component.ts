@@ -4,13 +4,17 @@ import {AuthService} from '../auth.service'
 import { Router } from '@angular/router';
 import { ActivatedRoute } from '@angular/router';
 import {CreateTourService} from '../services/create-tour.service'
+import {FirebaseService} from '../services/firebase.service'
 
 @Component({
   selector: 'app-private-page',
   templateUrl: './private-page.component.html',
   styleUrls: ['./private-page.component.css']
+
 })
 export class PrivatePageComponent implements OnInit {
+
+  fileToUpload: File = null;
 
   
   title: String = ''
@@ -20,17 +24,14 @@ export class PrivatePageComponent implements OnInit {
   user: any;
   _id: any;
   form={}
-  listObj: any = {
-    newTour: '',
-    user: '',
-    city: '',
-  }
 
 
   constructor(private authService: AuthService,
   private router: Router,
   private activatedRoute: ActivatedRoute,
-  private createTourService: CreateTourService) { }
+  private createTourService: CreateTourService,
+  private firebaseService: FirebaseService
+  ) { }
 
   ngOnInit() {
   
@@ -44,6 +45,8 @@ export class PrivatePageComponent implements OnInit {
       })
     }
 
+    
+
     handleLogout(){
       this.authService.logout()
       this.router.navigate(['signup'])
@@ -53,6 +56,20 @@ export class PrivatePageComponent implements OnInit {
       this.createTour()
       alert("Tu tour ha sido creado y esta siendo revisado. Gracias!")
  }
-  }
+
+    handleFileInput(event){  
+      //this.fileToUpload = file.item(0)
+      console.log(event.target.files[0])
+      this.firebaseService.uploadImage(event.target.files[0])
+        .then(url=>{
+          console.log(url)
+          this.form['photoURL'] = url
+        })
+
+    }
+
+ }
+
+  
 
 

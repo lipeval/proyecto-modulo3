@@ -32,7 +32,11 @@ export class CardPageComponent implements OnInit {
   }
 
   ngOnInit() {
-      this.tours = this.toursService.getList()
+      this.toursService.getAllTours()
+      .subscribe(res => {
+        console.log(res);
+        this.tours = res
+      });
       
   }
 }
