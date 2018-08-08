@@ -33,7 +33,7 @@
 
   .mat-card{
     border-radius: 40px;
-    background: #4678b1;
+    background: #b4c7dd;
     color: white;
     margin: 30px;
     display: inline-block;
@@ -61,6 +61,12 @@
 iframe{
     height: 250px;
     width: 300px
+}
+
+.back{
+    background-image: url('https://i.imgur.com/zTk8tKT.jpg');
+    background-repeat: no-repeat;
+    background-size: 100%
 }
 
 hr.style-eight {
